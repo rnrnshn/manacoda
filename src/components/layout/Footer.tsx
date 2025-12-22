@@ -41,15 +41,33 @@ export default function Footer() {
           >
             <div className="flex items-center gap-2 mb-4">
               <img
-                src="/images/logo.svg"
+                src="/vertical_logo.svg"
                 alt="MANA CODA"
-                className="h-8 w-auto"
+                className="h-auto w-12"
               />
-              <span className="text-xl font-bold font-display">MANA CODA</span>
             </div>
-            <p className="text-neutral-gray-300 text-sm mb-4">
-              Ela Conecta. Ela Cria. Ela Conquista.
-            </p>
+            
+          </motion.div>
+
+          {/* Quick Links */}
+          <motion.div
+            variants={fadeInUp}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+          >
+            <p className="pb-4">Para mais informações, dúvidas e esclarecimentos, entre em contacto pelos canais:</p>
+            <p><span className="text-brand-gold font-semibold">Contacto:</span> + 258 80 123 4567</p>
+            <p><span className="text-brand-gold font-semibold">Email:</span> manacoda@cumunite.co.mz</p>
+          </motion.div>
+
+          {/* Contact */}
+          <motion.div
+            variants={fadeInUp}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+          >
             <div className="flex gap-4">
               {socialLinks.map((social) => {
                 const Icon = social.icon
@@ -67,59 +85,6 @@ export default function Footer() {
                 )
               })}
             </div>
-          </motion.div>
-
-          {/* Quick Links */}
-          <motion.div
-            variants={fadeInUp}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-          >
-            <h3 className="font-semibold mb-4">Links Rápidos</h3>
-            <ul className="space-y-2 text-sm text-neutral-gray-300">
-              <li>
-                <a href="#sobre-nos" className="hover:text-brand-pink transition-colors">
-                  Sobre Nós
-                </a>
-              </li>
-              <li>
-                <a href="#programas" className="hover:text-brand-pink transition-colors">
-                  Programas
-                </a>
-              </li>
-              <li>
-                <a href="#comunidade" className="hover:text-brand-pink transition-colors">
-                  Comunidade
-                </a>
-              </li>
-              <li>
-                <a href="#contacto" className="hover:text-brand-pink transition-colors">
-                  Contacto
-                </a>
-              </li>
-            </ul>
-          </motion.div>
-
-          {/* Contact */}
-          <motion.div
-            variants={fadeInUp}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-          >
-            <h3 className="font-semibold mb-4">Contacto</h3>
-            <p className="text-sm text-neutral-gray-300 mb-2">
-              <a
-                href="mailto:hello@manacoda.co.mz"
-                className="hover:text-brand-pink transition-colors"
-              >
-                hello@manacoda.co.mz
-              </a>
-            </p>
-            <p className="text-sm text-neutral-gray-300">
-              Moçambique
-            </p>
           </motion.div>
         </div>
 
