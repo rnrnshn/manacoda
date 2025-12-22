@@ -91,12 +91,12 @@ code {
 
 @theme inline {
   /* Brand Colors - MANA CODA */
-  --color-brand-navy: #1A2332;
-  --color-brand-navy-light: #243447;
-  --color-brand-pink: #E91E8C;
-  --color-brand-pink-light: #F54FA8;
-  --color-brand-gold: #F5A623;
-  --color-brand-gold-light: #FDB813;
+  --color-brand-navy: #081F35;
+  --color-brand-navy-light: #0B082C;
+  --color-brand-pink: #C471B6;
+  --color-brand-pink-light: #C471B6;
+  --color-brand-gold: #BCA075;
+  --color-brand-gold-light: #BCA075;
   
   /* Neutral Colors */
   --color-neutral-white: #FFFFFF;

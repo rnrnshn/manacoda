@@ -10,11 +10,11 @@ export default function Hero() {
   return (
     <section
       id="hero"
-      className="min-h-screen flex items-center justify-center bg-brand-navy relative overflow-hidden"
+      className="min-h-screen flex items-center justify-center bg-brand-navy relative overflow-hidden bg-[url(/hero.png)]"
     >
       {/* Background Pattern (optional) */}
       <div className="absolute inset-0 opacity-10">
-        <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px]" />
+        <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:40px_40px]" />
       </div>
 
       <motion.div
@@ -25,12 +25,11 @@ export default function Hero() {
       >
         <motion.h1
           variants={fadeInUp}
-          className="text-5xl md:text-display-lg font-bold text-white mb-6 font-display"
+          className="text-7xl md:text-display-lg font-semibold text-white mb-6 font-display"
         >
-          <span className="block">Ela Conecta.</span>
-          <span className="block">Ela Cria.</span>
-          <span className="block bg-gradient-to-r from-brand-pink to-brand-gold bg-clip-text text-transparent">
-            Ela Conquista.
+          <span className="block">O Futuro da Tecnologia em</span>
+          <span className="block text-[#C471B6]">
+            Moçambique tem Rosto
           </span>
         </motion.h1>
 
@@ -38,8 +37,7 @@ export default function Hero() {
           variants={fadeInUp}
           className="text-xl md:text-body-lg text-neutral-gray-300 max-w-3xl mx-auto mb-8"
         >
-          MANA CODA não é apenas uma comunidade, é um movimento. Um movimento
-          de mulheres que codam, desenham, constroem, lideram.
+          Junta-te à comunidade que está a transformar mulheres curiosas em líderes da inovação.
         </motion.p>
 
         <motion.div variants={fadeInUp} className="flex gap-4 justify-center">
@@ -47,15 +45,9 @@ export default function Hero() {
             variant="primary"
             size="lg"
             onClick={() => scrollToSection('comunidade')}
+            className="bg-brand-navy border rounded-none border-brand-gold"
           >
             Junta-te à Comunidade
-          </Button>
-          <Button
-            variant="outline"
-            size="lg"
-            onClick={() => scrollToSection('sobre-nos')}
-          >
-            Sabe Mais
           </Button>
         </motion.div>
       </motion.div>

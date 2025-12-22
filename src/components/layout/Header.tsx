@@ -55,13 +55,10 @@ export default function Header() {
           >
             <a href="/" className="flex items-center gap-2">
               <img
-                src="/images/logo.svg"
+                src="/logo.svg"
                 alt="MANA CODA"
                 className="h-10 w-auto"
               />
-              <span className="text-xl font-bold text-white font-display">
-                MANA CODA
-              </span>
             </a>
           </motion.div>
 
@@ -91,6 +88,7 @@ export default function Header() {
               variant="gold"
               size="sm"
               onClick={() => handleNavClick('comunidade')}
+              className="rounded-none border-brand-gold text-white py-3"
             >
               Junta-te à Comunidade
             </Button>
