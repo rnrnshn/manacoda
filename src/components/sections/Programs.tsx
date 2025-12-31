@@ -29,12 +29,7 @@ const notchShapes: Record<'left' | 'center' | 'right', string> = {
 
 export default function Programs() {
   return (
-    <section id="programas" className="py-20 bg-brand-navy relative overflow-hidden">
-      {/* Background Grid Pattern */}
-      <div className="absolute inset-0 opacity-10">
-        <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px]" />
-      </div>
-
+    <section id="programas" className="py-20 bg-[#272356] relative overflow-hidden">
       <div className="container mx-auto px-4 relative z-10">
         <ScrollReveal variants={fadeInUp}>
           <div className="text-center mb-10">
@@ -59,12 +54,8 @@ export default function Programs() {
             <motion.div key={index} variants={fadeInUp}>
               <div
                 className="relative bg-brand-navy-light p-8 border border-brand-navy/80 hover:border-brand-pink transition-colors h-full flex flex-col"
-                style={{
-                  clipPath: notchShapes[program.notch],
-                  boxShadow: '0 20px 40px rgba(0,0,0,0.25)',
-                }}
               >
-                <h3 className="text-brand-pink text-2xl font-semibold leading-tight mb-6">
+                <h3 className="text-brand-pink text-2xl font-semibold leading-tight mb-6 max-w-[15ch] min-h-[5.75rem]">
                   {program.title}
                 </h3>
                 <p className="text-neutral-gray-100 text-lg leading-relaxed flex-grow">
@@ -81,4 +72,3 @@ export default function Programs() {
     </section>
   )
 }
-

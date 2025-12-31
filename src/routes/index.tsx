@@ -70,11 +70,9 @@ function HomePage() {
       <Hero />
       <About />
       <Vision />
-      <Manifesto />
       <Programs />
       <Partners />
       <Community />
-      <Contact />
     </div>
   )
 }
