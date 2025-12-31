@@ -14,7 +14,7 @@ export default function About() {
 
         <div className="max-w-4xl mx-auto">
           <ScrollReveal variants={slideInLeft}>
-            <h3 className="text-5xl text-center md:text-display-md font-bold mb-6 text-brand-pink font-display">
+            <h3 className="text-3xl text-center md:text-display-md font-bold mb-6 text-brand-pink font-display">
               MANA CODA
             </h3>
           </ScrollReveal>

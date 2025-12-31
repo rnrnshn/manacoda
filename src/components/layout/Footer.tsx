@@ -33,7 +33,7 @@ export default function Footer() {
   return (
     <footer className="bg-brand-navy text-white">
       <div className="container mx-auto px-4 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-20 mb-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-20 mb-8">
           {/* Brand Section */}
           <motion.div
             variants={fadeInUp}
@@ -41,7 +41,7 @@ export default function Footer() {
             whileInView="visible"
             viewport={{ once: true }}
           >
-            <div className="flex justify-end items-center gap-2 mb-4">
+            <div className="flex md:justify-end items-center gap-2 mb-4">
               <img
                 src="/vertical_logo.svg"
                 alt="MANA CODA"

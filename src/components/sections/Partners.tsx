@@ -21,7 +21,7 @@ export default function Partners() {
   return (
     <section
       id="parceiros"
-      className="relative overflow-visible py-24 pb-52 bg-brand-navy"
+      className="relative overflow-visible py-24 md:pb-52 bg-brand-navy"
     >
       <div className="container mx-auto px-4 relative z-10">
         <ScrollReveal variants={fadeInUp}>

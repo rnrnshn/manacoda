@@ -36,7 +36,7 @@ export default function Community() {
   return (
     <section
       id="comunidade"
-      className="relative overflow-visible py-56 bg-[#272356]"
+      className="relative overflow-visible py-20 md:py-56 bg-[#272356]"
     >
       <div className="absolute inset-0 pointer-events-none opacity-20 bg-[radial-gradient(circle_at_top_left,#ffffff10_0,transparent_30%),radial-gradient(circle_at_bottom_right,#ffffff08_0,transparent_28%)]" />
       <GridPattern
