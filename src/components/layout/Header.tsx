@@ -39,7 +39,7 @@ export default function Header() {
     <>
       <header
         className={cn(
-          'fixed top-0 left-0 right-0 z-50 transition-all duration-300',
+          'fixed top-0 left-0 right-0 z-[80] transition-all duration-300',
           isScrolled
             ? 'bg-brand-navy/95 backdrop-blur-md shadow-lg'
             : 'bg-transparent'
@@ -113,7 +113,7 @@ export default function Header() {
             animate={{ opacity: 1, x: 0 }}
             exit={{ opacity: 0, x: '100%' }}
             transition={{ duration: 0.3 }}
-            className="fixed top-0 right-0 bottom-0 w-80 bg-brand-navy z-50 md:hidden shadow-2xl"
+            className="fixed top-0 right-0 bottom-0 w-80 bg-brand-navy z-[79] md:hidden shadow-2xl"
           >
             <div className="flex flex-col h-full p-6">
               <div className="flex items-center justify-between mb-8">
@@ -160,4 +160,3 @@ export default function Header() {
     </>
   )
 }
-
