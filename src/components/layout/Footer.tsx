@@ -1,37 +1,39 @@
-import { Facebook, Instagram, Linkedin, Mail } from 'lucide-react'
 import { motion } from 'framer-motion'
 import { fadeInUp } from '@/lib/animations'
+import { FaFacebookSquare, FaLinkedin } from 'react-icons/fa'
+import { FaSquareTwitter } from 'react-icons/fa6'
+import { RiInstagramFill } from 'react-icons/ri'
 
 export default function Footer() {
   const currentYear = new Date().getFullYear()
 
   const socialLinks = [
     {
+      name: 'LinkedIn',
+      Icon: FaLinkedin,
+      href: 'https://www.linkedin.com/company/manacoda',
+    },
+    {
+      name: 'Twitter',
+      Icon: FaSquareTwitter,
+      href: 'https://twitter.com/manacoda',
+    },
+    {
       name: 'Facebook',
-      icon: Facebook,
+      Icon: FaFacebookSquare,
       href: 'https://www.facebook.com/manacoda',
     },
     {
       name: 'Instagram',
-      icon: Instagram,
+      Icon: RiInstagramFill,
       href: 'https://www.instagram.com/manacoda',
-    },
-    {
-      name: 'LinkedIn',
-      icon: Linkedin,
-      href: 'https://www.linkedin.com/company/manacoda',
-    },
-    {
-      name: 'Email',
-      icon: Mail,
-      href: 'mailto:hello@manacoda.co.mz',
     },
   ]
 
   return (
     <footer className="bg-brand-navy text-white">
       <div className="container mx-auto px-4 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-20 mb-8">
           {/* Brand Section */}
           <motion.div
             variants={fadeInUp}
@@ -39,7 +41,7 @@ export default function Footer() {
             whileInView="visible"
             viewport={{ once: true }}
           >
-            <div className="flex items-center gap-2 mb-4">
+            <div className="flex justify-end items-center gap-2 mb-4">
               <img
                 src="/vertical_logo.svg"
                 alt="MANA CODA"
@@ -68,32 +70,33 @@ export default function Footer() {
             whileInView="visible"
             viewport={{ once: true }}
           >
-            <div className="flex gap-4">
-              {socialLinks.map((social) => {
-                const Icon = social.icon
-                return (
-                  <a
-                    key={social.name}
-                    href={social.href}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-neutral-gray-300 hover:text-brand-pink transition-colors"
-                    aria-label={social.name}
-                  >
-                    <Icon size={20} />
-                  </a>
-                )
-              })}
+            <div className="flex flex-col gap-4">
+              <p>Siga-nos:</p>
+              <div className="flex gap-4">
+                {socialLinks.map((social) => {
+                  const Icon = social.Icon
+                  return (
+                    <a
+                      key={social.name}
+                      href={social.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className=""
+                      aria-label={social.name}
+                    >
+                      <Icon className="h-8 w-8 bg-brand-navy-light text-white shadow-sm transition hover:bg-brand-pink focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-pink" />
+                    </a>
+                  )
+                })}
+              </div>
             </div>
           </motion.div>
         </div>
-
-        {/* Copyright */}
-        <div className="border-t border-brand-navy-light pt-8 text-center text-sm text-neutral-gray-500">
-          <p>© {currentYear} MANA CODA. Todos os direitos reservados.</p>
-        </div>
       </div>
+      {/* Copyright */}
+        <div className="border-t border-brand-navy-light py-4 text-center text-sm text-neutral-gray-500 bg-white">
+          <p className="text-brand-navy">© {currentYear} MANA CODA. Todos os direitos reservados.</p>
+        </div>
     </footer>
   )
 }
-
