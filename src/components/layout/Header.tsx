@@ -10,7 +10,6 @@ const navItems = [
   { id: 'sobre-nos', label: 'Sobre Nós' },
   { id: 'programas', label: 'Programas' },
   { id: 'comunidade', label: 'Comunidade' },
-  { id: 'contacto', label: 'Contacto' },
 ]
 
 export default function Header() {
@@ -113,13 +112,15 @@ export default function Header() {
             animate={{ opacity: 1, x: 0 }}
             exit={{ opacity: 0, x: '100%' }}
             transition={{ duration: 0.3 }}
-            className="fixed top-0 right-0 bottom-0 w-80 bg-brand-navy z-[79] md:hidden shadow-2xl"
+            className="fixed inset-0 w-full bg-brand-navy z-[90] md:hidden shadow-2xl"
           >
             <div className="flex flex-col h-full p-6">
               <div className="flex items-center justify-between mb-8">
-                <span className="text-xl font-bold text-white font-display">
-                  MANA CODA
-                </span>
+                <img
+                  src="/logo.svg"
+                  alt="MANA CODA"
+                  className="h-10 w-auto"
+                />
                 <button
                   onClick={() => setIsMobileMenuOpen(false)}
                   className="text-white p-2"
