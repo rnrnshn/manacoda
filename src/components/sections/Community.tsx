@@ -31,13 +31,13 @@ export default function Community() {
   return (
     <section
       id="comunidade"
-      className="relative overflow-visible py-20 bg-gradient-to-b from-brand-navy-light to-brand-navy"
+      className="relative overflow-visible py-56 bg-[#272356]"
     >
       <div className="absolute inset-0 pointer-events-none opacity-20 bg-[radial-gradient(circle_at_top_left,#ffffff10_0,transparent_30%),radial-gradient(circle_at_bottom_right,#ffffff08_0,transparent_28%)]" />
       <div className="absolute inset-0 pointer-events-none opacity-15" style={{ backgroundImage: 'linear-gradient(rgba(255,255,255,0.07) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.07) 1px, transparent 1px))', backgroundSize: '80px 80px' }} />
 
       <div className="container relative z-10 mx-auto px-4">
-        <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between gap-10">
+        <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between gap-10 mb-32">
           <ScrollReveal variants={fadeInUp} className="max-w-xl">
             <h2 className="text-3xl md:text-4xl font-medium text-white leading-tight font-display md:whitespace-nowrap">
               O Ecossistema
@@ -90,32 +90,43 @@ export default function Community() {
           </motion.div>
         </div>
 
-        <div className="relative mt-14">
-          <div className="absolute left-0 top-0 h-full w-28 sm:w-32">
-            <div className="h-full w-full bg-[url('/square_pattern_1.svg')] bg-cover opacity-80" />
-          </div>
-          <div className="absolute right-0 bottom-0 h-full w-28 sm:w-32">
-            <div className="h-full w-full bg-[url('/square_pattern_2.svg')] bg-cover opacity-80" />
-          </div>
-
-          <div className="relative border border-brand-gold bg-brand-navy px-6 sm:px-10 py-10 lg:py-12">
-            <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-6">
-              <div>
-                <h3 className="text-3xl font-semibold text-white leading-tight">
-                  Faça parte deste <span className="text-brand-pink">movimento</span>
-                </h3>
-                <p className="text-lg text-neutral-gray-100 mt-3">
-                  Junte-se à nossa comunidade
-                </p>
+        <div className="relative flex justify-center">
+          <div className="relative bg-[linear-gradient(90deg,#508677_0%,#4498D6_100%)] p-px w-full lg:w-[60%]">
+            <div
+              className="relative overflow-hidden px-6 sm:px-20 py-10 lg:py-12"
+              style={{ backgroundColor: '#081F35' }}
+            >
+              <div className="absolute inset-0 pointer-events-none">
+                <img
+                  src="/sq_p_1.png"
+                  alt=""
+                  className="absolute left-0 top-0 h-20 sm:h-24 md:h-28 w-auto max-w-none opacity-90 object-contain"
+                />
+                <img
+                  src="/sq_p_2.png"
+                  alt=""
+                  className="absolute right-0 bottom-0 h-20 sm:h-24 md:h-28 w-auto max-w-none opacity-90 object-contain"
+                />
               </div>
-              <Button
-                variant="primary"
-                size="lg"
-                className="bg-brand-navy border border-brand-gold rounded-none text-brand-gold hover:bg-brand-navy inline-flex items-center justify-center gap-2"
-                onClick={() => scrollToSection('contacto')}
-              >
-                Junta-te à Comunidade
-              </Button>
+
+              <div className="relative flex flex-col lg:flex-row lg:items-center lg:justify-between gap-6">
+                <div>
+                  <h3 className="text-3xl font-semibold text-white leading-tight">
+                    Faça parte deste <span className="text-brand-pink">movimento</span>
+                  </h3>
+                  <p className="text-lg text-neutral-gray-100 mt-3">
+                    Junte-se à nossa comunidade
+                  </p>
+                </div>
+                <Button
+                  variant="primary"
+                  size="lg"
+                  className="bg-brand-navy border rounded-none border-brand-gold"
+                  onClick={() => scrollToSection('contacto')}
+                >
+                  Junta-te à Comunidade
+                </Button>
+              </div>
             </div>
           </div>
         </div>
