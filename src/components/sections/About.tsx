@@ -4,7 +4,7 @@ import { fadeInUp, slideInLeft } from '@/lib/animations'
 
 export default function About() {
   return (
-    <section id="sobre-nos" className="relative py-28 bg-brand-navy">
+    <section id="sobre-nos" className="relative py-28 pb-32 bg-brand-navy">
       <div className="container mx-auto px-4">
         <ScrollReveal variants={fadeInUp}>
           <h2 className="text-xl md:text-heading-xl text-brand-gold mb-6 text-center font-display">
@@ -20,7 +20,7 @@ export default function About() {
           </ScrollReveal>
 
           <ScrollReveal variants={fadeInUp}>
-            <p className="text-center text-body-lg text-neutral-gray-300 mb-2 leading-relaxed">
+            <p className="max-w-2xl mx-auto text-center text-body-lg text-neutral-gray-300 mb-2 leading-relaxed">
               MANA CODA não é apenas uma comunidade, é um movimento. Inspiradas
               por iniciativas como Women Techmakers e Laboratoria, nascemos para
               transformar o ecossistema tecnológico moçambicano.
@@ -28,7 +28,7 @@ export default function About() {
           </ScrollReveal>
 
           <ScrollReveal variants={fadeInUp}>
-              <p className="text-center text-body-lg text-neutral-gray-300 leading-relaxed">
+              <p className="max-w-2xl mx-auto text-center text-body-lg text-neutral-gray-300 leading-relaxed">
                 <span className="font-semibold">A Nossa Visão</span> Tornar Moçambique a referência nº 1 na formação e liderança
                 feminina em STEM em África.
               </p>
